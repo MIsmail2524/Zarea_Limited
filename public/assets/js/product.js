@@ -6,6 +6,8 @@ let p;
 try { p = await api(`/api/products/${encodeURIComponent(slug || '')}`); }
 catch { $('name').textContent = 'Product not found'; $('desc').innerHTML = '<a class="btn btn--orange" href="/marketplace">Back to marketplace</a>'; throw new Error('not found'); }
 productCache.set(p.id, p);
+const KG = [[/bag \(50/i, 50], [/bag \(45/i, 45.36], [/bag \(10/i, 10], [/^ton/i, 1000], [/maund/i, 40], [/^kg/i, 1], [/cubic foot/i, 45], [/cubic metre/i, 2400], [/1,000 bricks/i, 3000], [/litre/i, 0.85], [/panel/i, 28], [/unit/i, 40]];
+const kgPer = (KG.find(([re]) => re.test(p.unit)) || [0, 50])[1];
 document.title = `${p.name} Price in Pakistan — Zarea`;
 
 $('crumbs').insertAdjacentHTML('beforeend', ` / <a href="/marketplace?category=${p.category}">${esc(catName(p.category))}</a>`);
@@ -26,14 +28,14 @@ if (p.price != null) {
     <div class="row" style="margin-top:12px"><button class="btn btn--orange" id="add" style="flex:1">${icon('cart', 18)} Add to cart</button><button class="btn" id="buy">Buy now</button></div>`;
   const step = Math.max(1, Math.round(p.moq / 10));
   const q = () => Math.max(1, Math.floor(Number($('qty').value)) || p.moq);
-  const upd = () => { $('sub').textContent = pkr(q() * p.price); updateLanded(); };
+  const upd = () => { $('sub').textContent = pkr(q() * p.price); if ($('to').options.length) updateLanded(); };
   $('inc').onclick = () => { $('qty').value = q() + step; upd(); };
   $('dec').onclick = () => { $('qty').value = Math.max(p.moq, q() - step); upd(); };
   $('qty').oninput = upd;
   $('add').onclick = () => { if (q() < p.moq) return toast(`Minimum order is ${p.moq}`); cart.add(p, q()); };
   $('buy').onclick = () => { if (q() < p.moq) return toast(`Minimum order is ${p.moq}`); cart.add(p, q()); location.href = '/checkout'; };
   $('bulk').innerHTML = `Buying more than <b>${(p.moq * 20).toLocaleString()}</b> ${esc(p.unit)}? <a href="/rfq?category=${p.category}&title=${encodeURIComponent(p.name)}" style="font-weight:700;text-decoration:underline">Post an RFQ</a> for volume pricing from multiple suppliers.`;
-  setTimeout(upd);
+  $('sub').textContent = pkr(q() * p.price);
 } else {
   $('price').textContent = 'Price on request';
   $('unit').textContent = `per ${p.unit}`;
@@ -57,8 +59,6 @@ reveal();
 const meta = await api('/api/meta');
 const u = await me();
 $('to').innerHTML = meta.cities.map((c) => `<option ${c === (u.city || 'Lahore') ? 'selected' : ''}>${esc(c)}</option>`).join('');
-const KG = [[/bag \(50/i, 50], [/bag \(45/i, 45.36], [/bag \(10/i, 10], [/^ton/i, 1000], [/maund/i, 40], [/^kg/i, 1], [/cubic foot/i, 45], [/cubic metre/i, 2400], [/1,000 bricks/i, 3000], [/litre/i, 0.85], [/panel/i, 28], [/unit/i, 40]];
-const kgPer = (KG.find(([re]) => re.test(p.unit)) || [0, 50])[1];
 async function updateLanded() {
   if (p.price == null) { $('landed').textContent = 'Freight is included in supplier quotes.'; return; }
   const qty = Math.max(1, Math.floor(Number($('qty')?.value)) || p.moq);
