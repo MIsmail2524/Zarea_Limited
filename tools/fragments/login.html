@@ -1,0 +1,33 @@
+<main class="section">
+  <div class="container" style="max-width:980px">
+    <div class="grid g2" style="align-items:stretch">
+      <div class="panel" style="background:var(--navy-950);color:#e8eef5;border:0">
+        <span class="eyebrow">Welcome to Zarea</span>
+        <h1 class="h2" style="margin:12px 0">One account for buying, selling and credit.</h1>
+        <ul class="muted" style="color:#a9b8c8;line-height:2;padding-left:18px">
+          <li>Live prices and alerts across 13 categories</li><li>RFQ bidding with verified suppliers</li><li>Zarea Credit up to 90 days</li><li>Order tracking with proof of delivery</li>
+        </ul>
+        <p class="small" style="color:#8ea1b5;margin-top:24px">Demo accounts are listed in the project README.</p>
+      </div>
+      <div class="panel">
+        <div class="seg" role="tablist" style="margin-bottom:18px"><button class="on" data-t="in">Sign in</button><button data-t="up">Create account</button></div>
+        <form class="form" id="in" style="grid-template-columns:1fr">
+          <div class="field"><label for="le">Email</label><input id="le" name="email" type="email" required autocomplete="username"></div>
+          <div class="field"><label for="lp">Password</label><input id="lp" name="password" type="password" required autocomplete="current-password"></div>
+          <button class="btn btn--orange" type="submit">Sign in</button><p class="status"></p>
+        </form>
+        <form class="form hidden" id="up">
+          <div class="field field--full"><label>I want to</label><div class="seg" id="role-seg"><button type="button" class="on" data-r="buyer">Buy materials</button><button type="button" data-r="supplier">Sell as supplier</button></div></div>
+          <div class="field"><label for="rn">Full name</label><input id="rn" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="rc">Business name</label><input id="rc" name="company" required autocomplete="organization"></div>
+          <div class="field"><label for="re">Business email</label><input id="re" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="rp">Phone</label><input id="rp" name="phone" autocomplete="tel" placeholder="+92 3xx xxxxxxx"></div>
+          <div class="field"><label for="rcity">City</label><select id="rcity" name="city" required></select></div>
+          <div class="field"><label for="rntn">NTN (for verification)</label><input id="rntn" name="ntn"></div>
+          <div class="field field--full"><label for="rpw">Password</label><input id="rpw" name="password" type="password" required minlength="10" autocomplete="new-password"><span class="hint">10+ characters with letters and numbers.</span></div>
+          <div class="field--full"><button class="btn btn--orange btn--block" type="submit">Create account</button></div><p class="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

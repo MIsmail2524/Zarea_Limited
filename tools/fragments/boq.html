@@ -1,0 +1,29 @@
+<main>
+  <section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> / Project estimator</div>
+    <h1 class="h2">Estimate your building's materials — priced live.</h1>
+    <p class="lead">Enter covered area and pick brands. We calculate grey-structure quantities and today's cost, then add everything to your cart in one click.</p></div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="pd">
+      <div class="panel">
+        <div class="form" id="in">
+          <div class="field"><label for="sqft">Covered area (sq ft)</label><input id="sqft" inputmode="numeric" value="2000"></div>
+          <div class="field"><label for="type">Structure</label><select id="type"><option value="1">Residential (brick masonry, RCC slab)</option><option value="1.15">Commercial / plaza</option><option value="0.85">Boundary &amp; light structures</option></select></div>
+          <div class="field"><label for="cem">Cement</label><select id="cem"></select></div>
+          <div class="field"><label for="stl">Steel</label><select id="stl"></select></div>
+          <div class="field"><label for="snd">Sand</label><select id="snd"></select></div>
+          <div class="field"><label for="crs">Crush</label><select id="crs"></select></div>
+        </div>
+        <div class="table-wrap" style="margin-top:20px"><table><thead><tr><th>Material</th><th class="r">Quantity</th><th class="r">Rate</th><th class="r">Cost</th></tr></thead><tbody id="out"></tbody>
+          <tfoot><tr><td colspan="3"><b>Estimated material cost</b></td><td class="r num"><b class="accent" id="tot" style="font-size:18px"></b></td></tr></tfoot></table></div>
+        <div class="row" style="margin-top:16px"><button class="btn btn--orange" id="add">Add all to cart</button><a class="btn btn--ghost" id="rfq" href="/rfq">Get bids instead</a><button class="btn btn--ghost" id="print">Print estimate</button></div>
+      </div>
+      <aside class="panel stack" style="--gap:10px">
+        <h3 class="h4">How we estimate</h3>
+        <p class="small muted" style="margin:0">Pakistani rule-of-thumb ratios per sq ft of grey structure, adjusted by structure type:</p>
+        <div class="tier"><span>Cement</span><b>0.40 bag</b></div><div class="tier"><span>Steel</span><b>3.5 kg</b></div><div class="tier"><span>Bricks</span><b>22</b></div>
+        <div class="tier"><span>Sand</span><b>1.8 cft</b></div><div class="tier" style="border:0"><span>Crush</span><b>1.35 cft</b></div>
+        <p class="notice" style="margin:0">Estimates are indicative. Confirm quantities with your structural engineer.</p>
+      </aside>
+    </div>
+  </div>
+</main>

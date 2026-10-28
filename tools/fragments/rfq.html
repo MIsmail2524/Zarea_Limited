@@ -1,0 +1,27 @@
+<main>
+  <section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> / Request for quote</div>
+    <h1 class="h2">Let suppliers compete for your order.</h1>
+    <p class="lead">Post one requirement. Verified suppliers bid with delivered price and lead time. Compare side by side and award in one click — payment protected by escrow.</p></div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="pd">
+      <form class="panel" id="rfq-form">
+        <h2 class="h4">Your requirement</h2>
+        <div class="form" style="margin-top:14px">
+          <div class="field"><label for="cat">Category</label><select id="cat" name="category" required></select></div>
+          <div class="field"><label for="city">Delivery city</label><select id="city" name="city" required></select></div>
+          <div class="field field--full"><label for="title">What do you need?</label><input id="title" name="title" required placeholder="e.g. Grade 60 rebar 12–16 mm for 4-storey building"></div>
+          <div class="field"><label for="qty">Quantity</label><input id="qty" name="qty" inputmode="numeric" required></div>
+          <div class="field"><label for="unit">Unit</label><input id="unit" name="unit" required placeholder="Ton, Bag, Maund…"></div>
+          <div class="field"><label for="need">Needed by</label><input id="need" name="needed_by" type="date"></div>
+          <div class="field"><label for="tp">Target price per unit (optional)</label><input id="tp" name="target_price" inputmode="numeric"></div>
+          <div class="field field--full"><label for="notes">Specifications &amp; terms</label><textarea id="notes" name="notes" placeholder="Brand preferences, certificates, delivery schedule, unloading…"></textarea></div>
+          <div class="field--full"><button class="btn btn--orange" type="submit">Publish RFQ</button></div><p class="status"></p>
+        </div>
+      </form>
+      <aside class="stack" style="--gap:16px">
+        <div class="panel"><h3 class="h4">Why RFQ on Zarea</h3><ul class="small" style="padding-left:18px;line-height:1.9;margin:10px 0 0"><li>Average 2–5 bids from verified suppliers</li><li>Compare delivered price, lead time and rating</li><li>Your identity stays private until you award</li><li>Pay by escrow, advance, COD or Zarea Credit</li></ul></div>
+        <div class="panel"><div class="row between"><h3 class="h4">Open RFQs</h3><a class="small accent" href="/suppliers">Bid as supplier →</a></div><div id="open" style="margin-top:10px"></div></div>
+      </aside>
+    </div>
+  </div>
+</main>

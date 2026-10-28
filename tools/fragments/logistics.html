@@ -1,0 +1,27 @@
+<main>
+  <section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> / Logistics</div>
+    <h1 class="h2">Freight quotes in seconds. Tracking to the site.</h1>
+    <p class="lead">Compare truck types across 14 trade cities, book through Zarea, and follow every order from loading to proof of delivery.</p></div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="pd">
+      <div class="panel">
+        <h2 class="h4">Freight calculator</h2>
+        <div class="form" style="margin-top:14px;grid-template-columns:repeat(3,minmax(0,1fr))" id="fc">
+          <div class="field"><label for="from">From</label><select id="from"></select></div>
+          <div class="field"><label for="to">To</label><select id="to"></select></div>
+          <div class="field"><label for="kg">Load (tonnes)</label><input id="kg" inputmode="decimal" value="20"></div>
+        </div>
+        <div id="fq" style="margin-top:18px"></div>
+        <p class="small muted">Indicative road-freight rates; final price confirmed at booking.</p>
+      </div>
+      <aside class="stack" style="--gap:16px">
+        <form class="panel" id="track">
+          <h3 class="h4">Track an order</h3>
+          <div class="row" style="margin-top:10px"><input class="input" name="ref" placeholder="ZR-XXXXXX" style="flex:1;text-transform:uppercase" required aria-label="Order reference"><button class="btn btn--orange">Track</button></div>
+          <div id="tr" style="margin-top:12px"></div>
+        </form>
+        <div class="panel"><h3 class="h4">Need warehousing or import/export?</h3><p class="small muted">Temperature-controlled storage, customs clearance and port-to-site haulage.</p><a class="btn btn--ghost btn--sm" href="/about#import-export">Talk to logistics team</a></div>
+      </aside>
+    </div>
+  </div>
+</main>
