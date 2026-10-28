@@ -1,0 +1,18 @@
+<main>
+  <section class="page-head"><div class="container">
+    <div class="crumbs"><a href="/">Home</a> / Daily prices</div>
+    <h1 class="h2">Today's commodity prices in Pakistan</h1>
+    <p class="lead">Every listed price with 1, 7 and 30-day change, trend line and alerts — updated whenever a supplier changes a rate.</p>
+  </div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="toolbar">
+      <div class="chips" id="chips"></div>
+      <div class="row"><input class="input" id="q" placeholder="Filter…" style="width:200px;height:38px" aria-label="Filter prices"><button class="btn btn--ghost btn--sm" id="csv">Download CSV</button></div>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th class="sortable" data-k="name">Commodity</th><th>Unit</th><th class="sortable" data-k="city">Ships from</th><th class="sortable r" data-k="price">Price (PKR)</th><th class="sortable r" data-k="d1">1 day</th><th class="sortable r" data-k="d7">7 days</th><th class="sortable r" data-k="d30">30 days</th><th>30-day trend</th><th>Source</th><th></th></tr></thead>
+      <tbody id="rows"><tr><td colspan="10"><div class="skeleton" style="height:300px"></div></td></tr></tbody>
+    </table></div>
+    <p class="small muted" style="margin-top:12px">Cement, biomass, grains and sugar prices reflect the zarea.com board on 28 Oct 2026; other categories carry illustrative demo prices. Earlier history is simulated so trends can be demonstrated.</p>
+  </div>
+</main>

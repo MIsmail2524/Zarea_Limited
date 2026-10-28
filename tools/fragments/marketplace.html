@@ -1,0 +1,32 @@
+<main>
+  <section class="page-head"><div class="container">
+    <div class="crumbs"><a href="/">Home</a> / Marketplace</div>
+    <h1 class="h2" id="mk-title">Marketplace</h1>
+    <p class="lead" id="mk-sub">Verified suppliers, transparent prices, delivered nationwide.</p>
+  </div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="layout">
+      <aside class="filters panel" aria-label="Filters">
+        <h4>Search</h4><input class="input" id="f-q" placeholder="Product, brand…" aria-label="Search">
+        <h4>Category</h4><div id="f-cat"></div>
+        <h4>Brand</h4><div id="f-brand"></div>
+        <h4>Ships from</h4><select class="input" id="f-city" aria-label="City"><option value="">Any city</option></select>
+        <h4>Trust</h4><label class="check"><input type="checkbox" id="f-verified"> Verified suppliers only</label>
+        <button class="btn btn--ghost btn--sm btn--block" id="f-reset" style="margin-top:14px">Reset filters</button>
+      </aside>
+      <div>
+        <div class="toolbar">
+          <span class="muted" id="count">Loading…</span>
+          <div class="row"><label class="small muted" for="sort">Sort</label>
+            <select class="input" id="sort" style="width:auto;height:38px"><option value="">Recommended</option><option value="price_asc">Price: low to high</option><option value="price_desc">Price: high to low</option><option value="rating">Supplier rating</option><option value="name">Name</option></select></div>
+        </div>
+        <div class="grid" id="grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))"></div>
+        <div class="panel center" style="margin-top:26px">
+          <h3 class="h4">Can't find what you need?</h3>
+          <p class="muted">Post a request and let verified suppliers bid for it.</p>
+          <a class="btn btn--orange" href="/rfq">Post an RFQ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

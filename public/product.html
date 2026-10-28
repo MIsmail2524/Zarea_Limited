@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product — Zarea</title>
+  <meta name="description" content="Live price, 90-day trend, delivered cost and verified supplier details.">
+  <meta name="theme-color" content="#000911">
+  <meta property="og:title" content="Product — Zarea">
+  <meta property="og:description" content="Live price, 90-day trend, delivered cost and verified supplier details.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css?v=1">
+  <script type="module" src="/assets/js/product.js"></script>
+</head>
+<body>
+<main>
+  <section class="page-head"><div class="container">
+    <div class="crumbs" id="crumbs"><a href="/">Home</a> / <a href="/marketplace">Marketplace</a></div>
+    <div class="row" id="badges" style="margin-bottom:10px"></div>
+    <h1 class="h2" id="name">Loading…</h1>
+    <p class="lead" id="desc"></p>
+  </div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="pd">
+      <div class="stack" style="--gap:20px">
+        <div class="panel">
+          <div class="row between"><h2 class="h4">Price history · 90 days</h2><div class="row" id="changes"></div></div>
+          <div id="chart" style="margin-top:14px"><div class="skeleton" style="height:240px"></div></div>
+          <p class="small muted" id="src" style="margin:10px 0 0"></p>
+        </div>
+        <div class="grid g2">
+          <div class="panel"><h2 class="h4">Specifications</h2><table style="margin-top:10px"><tbody id="specs"></tbody></table></div>
+          <div class="panel"><h2 class="h4">Supplier</h2><div id="supplier" style="margin-top:12px"></div></div>
+        </div>
+        <div class="panel"><h2 class="h4">Recent buyer reviews</h2><div id="reviews" style="margin-top:10px"></div></div>
+        <div><h2 class="h4" style="margin-bottom:12px">Similar products</h2><div class="grid g4" id="similar"></div></div>
+      </div>
+      <aside class="buy-box stack" style="--gap:16px">
+        <div class="panel stack" style="--gap:14px">
+          <div><div class="p-price num" id="price" style="font-size:32px"></div><span class="muted small" id="unit"></span></div>
+          <div id="buy-controls"></div>
+          <div class="notice" id="bulk"></div>
+        </div>
+        <div class="panel stack" style="--gap:12px">
+          <h3 class="h4">Delivered cost estimate</h3>
+          <div class="row"><select class="input" id="to" style="flex:1" aria-label="Delivery city"></select></div>
+          <div id="landed" class="small"></div>
+        </div>
+        <div class="panel stack" style="--gap:12px">
+          <h3 class="h4">Price alert</h3>
+          <p class="small muted" style="margin:0">Get notified in your dashboard when the price crosses your target.</p>
+          <form class="row" id="alert-form"><select class="input" name="direction" style="width:auto"><option value="below">Below</option><option value="above">Above</option></select>
+            <input class="input" name="target" inputmode="numeric" placeholder="Target Rs" style="flex:1;min-width:100px" required><button class="btn btn--sm" type="submit">Set</button></form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+</body>
+</html>

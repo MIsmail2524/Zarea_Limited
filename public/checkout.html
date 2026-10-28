@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Zarea</title>
+  <meta name="description" content="Review your order, delivery and payment.">
+  <meta name="theme-color" content="#000911">
+  <meta property="og:title" content="Checkout — Zarea">
+  <meta property="og:description" content="Review your order, delivery and payment.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css?v=1">
+  <script type="module" src="/assets/js/checkout.js"></script>
+</head>
+<body>
+<main>
+  <section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> / Checkout</div><h1 class="h2">Checkout</h1><p class="lead">Orders are split per supplier, each with its own freight, dispatch and tracking.</p></div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="pd" id="wrap">
+      <div class="stack" style="--gap:18px">
+        <div class="panel"><h2 class="h4">1 · Items by supplier</h2><div id="groups" style="margin-top:12px"></div></div>
+        <form class="panel" id="co">
+          <h2 class="h4">2 · Delivery</h2>
+          <div class="form" style="margin-top:12px">
+            <div class="field"><label for="city">Delivery city</label><select id="city" name="delivery_city" required></select></div>
+            <div class="field"><label for="date">Preferred date</label><input id="date" name="delivery_date" type="date"></div>
+            <div class="field field--full"><label for="addr">Site / warehouse address</label><input id="addr" name="address" placeholder="Plot, street, area" required></div>
+          </div>
+          <h2 class="h4" style="margin-top:22px">3 · Payment</h2>
+          <div class="grid g2" id="pay" style="margin-top:12px"></div>
+          <button class="btn btn--orange btn--block" type="submit" style="margin-top:20px" id="place">Place order</button>
+          <p class="status" id="st"></p>
+        </form>
+      </div>
+      <aside class="buy-box panel stack" style="--gap:10px">
+        <h2 class="h4">Order summary</h2>
+        <div class="tier"><span>Materials</span><b class="num" id="s-sub"></b></div>
+        <div class="tier"><span>Freight (estimated)</span><b class="num" id="s-fr"></b></div>
+        <div class="tier" style="border:0;font-size:18px"><span>Total</span><b class="num accent" id="s-tot"></b></div>
+        <p class="small muted" style="margin:0">Escrow holds your payment until proof of delivery. Credit orders are due 30 days after dispatch.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+</body>
+</html>
