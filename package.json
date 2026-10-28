@@ -1,0 +1,13 @@
+{
+  "name": "zarea-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Next-generation B2B commodity marketplace for Zarea Limited — buyers, suppliers, credit, RFQ bidding, logistics, price intelligence and AI assistant (concept prototype)",
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node server.js",
+    "reset": "node server.js --reset-db",
+    "test": "node --test tests/"
+  }
+}
