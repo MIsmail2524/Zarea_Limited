@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /account
+Disallow: /supplier
+Disallow: /admin
+Disallow: /checkout
+Disallow: /api/
+Sitemap: https://zarea.com/sitemap.xml

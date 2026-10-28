@@ -378,3 +378,5 @@ td.r, th.r { text-align: right; }
   [data-reveal] { opacity: 1; transform: none; }
 }
 @media print { .topbar, .site-header, .site-footer, .no-print { display: none !important; } body { background: #fff; } }
+.kpi b, .stat-strip b { overflow-wrap: anywhere; }
+@media (max-width: 640px) { .kpi b { font-size: 20px; } .kpi { padding: 14px; } .chart text { font-size: 16px; } }
