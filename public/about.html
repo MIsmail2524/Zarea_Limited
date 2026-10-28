@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Zarea — B2B Commodity Marketplace</title>
+  <meta name="description" content="Zarea connects Pakistan's manufacturers, traders, farmers and industrial buyers with pricing, credit and logistics.">
+  <meta name="theme-color" content="#000911">
+  <meta property="og:title" content="About Zarea — B2B Commodity Marketplace">
+  <meta property="og:description" content="Zarea connects Pakistan's manufacturers, traders, farmers and industrial buyers with pricing, credit and logistics.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css?v=1">
+  <script type="module" src="/assets/js/about.js"></script>
+</head>
+<body>
+<main>
+  <section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> / About</div>
+    <h1 class="h2">Digitising how Pakistan trades commodities.</h1>
+    <p class="lead">Zarea connects manufacturers, traders, farmers and industrial buyers on one platform — with pricing transparency, credit, logistics and data that the traditional mandi system never offered.</p></div></section>
+  <section class="section"><div class="container">
+    <div class="grid g4">
+      <div class="card" data-reveal><div class="ico" data-i="truck"></div><h3>Logistics</h3><p>In-house fleet investment, warehousing and real-time tracking.</p></div>
+      <div class="card" data-reveal><div class="ico" data-i="credit"></div><h3>Trade credit</h3><p>Working capital for buyers; faster cash for suppliers.</p></div>
+      <div class="card" data-reveal id="import-export"><div class="ico" data-i="globe"></div><h3>Import / export</h3><p>Sourcing, customs and port-to-site haulage for cross-border trade.</p></div>
+      <div class="card" data-reveal><div class="ico" data-i="chart"></div><h3>Data analytics</h3><p>Price intelligence and demand insight for planning and procurement.</p></div>
+    </div>
+    <h2 class="h3" style="margin:48px 0 16px">Who we serve</h2>
+    <div class="chips" data-reveal><span class="chip">Cement plants</span><span class="chip">Power plants</span><span class="chip">Paper mills</span><span class="chip">Textile mills</span><span class="chip">Chemical manufacturers</span><span class="chip">Builders &amp; contractors</span><span class="chip">Feed mills</span><span class="chip">Farmers &amp; agri-traders</span><span class="chip">Retailers</span></div>
+  </div></section>
+  <section class="section section--white" id="contact"><div class="container" style="max-width:880px">
+    <h2 class="h2 center">Talk to us</h2><p class="lead center" style="margin:10px auto 24px">Sales, logistics, import/export, investor or partnership queries.</p>
+    <form class="panel form" id="contact-form">
+      <div class="field"><label for="n">Name</label><input id="n" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="p">Phone</label><input id="p" name="phone" autocomplete="tel"></div>
+      <div class="field"><label for="k">Topic</label><select id="k" name="kind"><option value="contact">General / sales</option><option value="logistics">Logistics &amp; warehousing</option><option value="import-export">Import / export</option><option value="quote">Bulk quote</option></select></div>
+      <div class="field field--full"><label for="m">Message</label><textarea id="m" name="message" required></textarea></div>
+      <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field--full"><button class="btn btn--orange" type="submit">Send</button></div><p class="status"></p>
+    </form>
+  </div></section>
+</main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zarea AI — Commodity Trading Assistant</title>
+  <meta name="description" content="Ask for live commodity prices, comparisons, freight, construction estimates, credit and order tracking.">
+  <meta name="theme-color" content="#000911">
+  <meta property="og:title" content="Zarea AI — Commodity Trading Assistant">
+  <meta property="og:description" content="Ask for live commodity prices, comparisons, freight, construction estimates, credit and order tracking.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css?v=1">
+  <script type="module" src="/assets/js/chat.js"></script>
+</head>
+<body>
+<main>
+  <section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> / Zarea AI</div>
+    <h1 class="h2">Zarea AI — your commodity trading assistant.</h1>
+    <p class="lead">Live prices, brand comparisons, freight, building estimates, credit and order tracking. English or Roman Urdu.</p></div></section>
+  <div class="container" style="padding-block:28px 70px">
+    <div class="pd">
+      <div class="chat">
+        <div class="chat-log" id="log" aria-live="polite"></div>
+        <form class="chat-input" id="ask"><input name="q" placeholder="Ask anything — e.g. sarya ka rate Lahore" autocomplete="off" aria-label="Message"><button class="btn btn--orange" type="submit">Send</button></form>
+      </div>
+      <aside class="stack" style="--gap:16px">
+        <div class="panel"><h3 class="h4">Try asking</h3><div class="suggest" id="sug" style="margin-top:12px"></div></div>
+        <div class="panel"><h3 class="h4">What it knows</h3><ul class="small muted" style="padding-left:18px;line-height:1.9;margin:8px 0 0"><li>Every live listing and its 90-day history</li><li>Freight rates for 14 cities</li><li>Construction ratios for grey structure</li><li>Credit policy and documents</li><li>Your order status by reference</li></ul></div>
+      </aside>
+    </div>
+  </div>
+</main>
+</body>
+</html>

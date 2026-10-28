@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Become a Supplier — Sell B2B on Zarea</title>
+  <meta name="description" content="List free, receive matched RFQs and get paid securely. Join Pakistan's B2B commodity marketplace.">
+  <meta name="theme-color" content="#000911">
+  <meta property="og:title" content="Become a Supplier — Sell B2B on Zarea">
+  <meta property="og:description" content="List free, receive matched RFQs and get paid securely. Join Pakistan's B2B commodity marketplace.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css?v=1">
+  <script type="module" src="/assets/js/suppliers.js"></script>
+</head>
+<body>
+<main>
+  <section class="hero" style="padding-block:clamp(48px,7vw,90px)"><div class="container hero-grid">
+    <div><span class="eyebrow">For manufacturers, traders &amp; farmers</span><h1 class="h1" style="margin-top:14px">Sell to thousands of verified business buyers.</h1>
+      <p class="lead">List free, receive RFQs matched to your category, set your own prices and get paid securely through escrow or on delivery.</p>
+      <div class="row" style="margin-top:24px"><a class="btn btn--orange" href="#apply">Apply now</a><a class="btn btn--ghost" href="/login?mode=register&role=supplier" style="color:#fff">Create supplier account</a></div></div>
+    <div class="grid g2" style="gap:14px">
+      <div class="card" style="background:#0b1f31;border-color:#1b3550;color:#fff"><b class="h3" data-count="13">0</b><p>Categories with active demand</p></div>
+      <div class="card" style="background:#0b1f31;border-color:#1b3550;color:#fff"><b class="h3" data-count="14">0</b><p>Trade cities covered</p></div>
+      <div class="card" style="background:#0b1f31;border-color:#1b3550;color:#fff"><b class="h3">0%</b><p>Registration fee</p></div>
+      <div class="card" style="background:#0b1f31;border-color:#1b3550;color:#fff"><b class="h3" data-count="10000" data-suf="+">0</b><p>Registered users on Zarea</p></div>
+    </div></div></section>
+  <section class="section"><div class="container">
+    <div class="grid g3">
+      <div class="card" data-reveal><div class="ico" data-i="shield"></div><h3>Verified badge</h3><p>KYC with NTN and incorporation documents builds instant buyer trust.</p></div>
+      <div class="card" data-reveal><div class="ico" data-i="handshake"></div><h3>Matched RFQs</h3><p>Bid on real requirements with quantity, city and deadline — buyers compare transparently.</p></div>
+      <div class="card" data-reveal><div class="ico" data-i="chart"></div><h3>Your prices, everywhere</h3><p>Rates you update feed the national daily price board, product pages and Zarea AI.</p></div>
+      <div class="card" data-reveal><div class="ico" data-i="credit"></div><h3>Get paid securely</h3><p>Escrow releases on proof of delivery; Zarea Credit pays you while buyers pay later.</p></div>
+      <div class="card" data-reveal><div class="ico" data-i="truck"></div><h3>Logistics on tap</h3><p>Book trucks through Zarea and give buyers live dispatch tracking.</p></div>
+      <div class="card" data-reveal><div class="ico" data-i="bell"></div><h3>Ratings that sell</h3><p>Buyer reviews after each delivery build your reputation and ranking.</p></div>
+    </div>
+  </div></section>
+  <section class="section section--white" id="apply"><div class="container" style="max-width:880px">
+    <h2 class="h2 center">Register as a supplier</h2><p class="lead center" style="margin:10px auto 26px">Our onboarding team will verify your documents and activate your listings.</p>
+    <form class="panel form" id="sup">
+      <div class="field"><label for="n">Business name</label><input id="n" name="name" required></div>
+      <div class="field"><label for="t">Supplier type</label><select id="t" name="supplier_type"><option>Manufacturer</option><option>Trader</option><option>Distributor</option><option>Farmer</option><option>Service provider</option></select></div>
+      <div class="field"><label for="p">Phone</label><input id="p" name="phone" required autocomplete="tel"></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="c">City</label><select id="c" name="city"></select></div>
+      <div class="field"><label for="m">Main commodity</label><select id="m" name="commodity"></select></div>
+      <div class="field"><label for="b">Brand (if any)</label><input id="b" name="brand"></div>
+      <div class="field"><label for="ntn">NTN</label><input id="ntn" name="ntn"></div>
+      <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field--full"><button class="btn btn--orange" type="submit">Submit application</button></div><p class="status"></p>
+    </form>
+  </div></section>
+</main>
+</body>
+</html>
