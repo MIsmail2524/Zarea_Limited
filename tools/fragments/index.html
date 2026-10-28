@@ -1,0 +1,100 @@
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow" data-reveal>Pakistan's B2B commodity marketplace · PSX: ZAL</span>
+        <h1 class="h1" style="margin-top:16px" data-reveal>Source smarter.<br>Pay later. <span class="accent">Deliver faster.</span></h1>
+        <p class="lead" data-reveal>Live prices, verified suppliers, competitive RFQ bidding, Zarea Credit and nationwide logistics for cement, steel, agri-biomass, fertilizer and 9 more categories.</p>
+        <form class="hero-search" action="/marketplace" role="search" data-reveal>
+          <input name="q" placeholder="What do you need? e.g. Lucky cement, Grade 60 steel" aria-label="Search">
+          <select name="city" aria-label="City" id="hero-city"><option value="">All cities</option></select>
+          <button class="btn btn--orange" type="submit">Search</button>
+        </form>
+        <div class="hero-chips" data-reveal>
+          <a href="/prices?category=cement">Cement rates today</a><a href="/marketplace?category=steel">Steel</a>
+          <a href="/marketplace?category=agriculture-biomass">Rice husk</a><a href="/boq">Estimate my building</a><a href="/ai">Ask Zarea AI</a>
+        </div>
+      </div>
+      <div class="network" aria-hidden="true">
+        <svg id="net" viewBox="0 0 500 520"></svg>
+        <div class="float-card c1"><span class="muted small">Lucky Cement (OPC) · today</span><b id="fc-price">Rs 1,625</b><span class="small" id="fc-chg"></span></div>
+        <div class="float-card c2"><span class="badge badge--ok">Delivered</span><b>500 bags · Lahore</b><span class="small muted">Escrow released to supplier</span></div>
+        <div class="float-card c3"><span class="badge badge--orange">Credit approved</span><b>Rs 25 Lac · 30 days</b><span class="small muted">Decision in under 72 h</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stat-strip" data-reveal>
+      <div><b><span data-count="2774.78" data-dec="0" data-pre="Rs " data-suf="m">0</span></b><span>FY26 revenue · up 107%</span></div>
+      <div><b><span data-count="1394" data-pre="Rs " data-suf="m">0</span></b><span>FY26 net profit</span></div>
+      <div><b><span data-count="13">0</span></b><span>Commodity categories</span></div>
+      <div><b><span data-count="10000" data-suf="+">0</span></b><span>Registered users</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="row between" style="margin-bottom:26px;align-items:end">
+        <div><span class="eyebrow" data-reveal>Shop by category</span><h2 class="h2" style="margin-top:10px" data-reveal>Everything industry runs on.</h2></div>
+        <a class="btn btn--ghost" href="/marketplace" data-reveal>View all products →</a>
+      </div>
+      <div class="grid g4" id="cats" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))"></div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="row between" style="margin-bottom:22px;align-items:end">
+        <div><span class="eyebrow" data-reveal>Market pulse</span><h2 class="h2" style="margin-top:10px" data-reveal>Today's biggest movers</h2></div>
+        <a class="btn btn--ghost" href="/prices" data-reveal>Full price board →</a>
+      </div>
+      <div class="table-wrap" data-reveal><table><thead><tr><th>Commodity</th><th>Ships from</th><th class="r">Price</th><th class="r">1 day</th><th class="r">7 days</th><th class="r">30 days</th><th>30-day trend</th></tr></thead><tbody id="movers"><tr><td colspan="7"><div class="skeleton" style="height:120px"></div></td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:720px;margin:0 auto 36px"><span class="eyebrow" data-reveal>One platform</span><h2 class="h2" style="margin-top:10px" data-reveal>From quote to doorstep, handled.</h2></div>
+      <div class="grid g3">
+        <a class="card card--hover" href="/rfq" data-reveal><div class="ico" data-i="handshake"></div><h3>Competitive RFQ bidding</h3><p>Post one requirement, receive bids from verified suppliers, compare delivered price and lead time, award in one click.</p></a>
+        <a class="card card--hover" href="/credit" data-reveal><div class="ico" data-i="credit"></div><h3>Zarea Credit — all categories</h3><p>30/60/90-day terms with an instant eligibility score. No longer limited to biomass.</p></a>
+        <a class="card card--hover" href="/logistics" data-reveal><div class="ico" data-i="truck"></div><h3>Freight &amp; live tracking</h3><p>Instant freight quotes by truck type for 14 cities, with dispatch, vehicle and proof-of-delivery tracking.</p></a>
+        <a class="card card--hover" href="/prices" data-reveal><div class="ico" data-i="chart"></div><h3>Price intelligence &amp; alerts</h3><p>Daily prices with 1/7/30-day change, 90-day charts and alerts when a price crosses your target.</p></a>
+        <a class="card card--hover" href="/boq" data-reveal><div class="ico" data-i="calc"></div><h3>Project estimator</h3><p>Enter covered area, get cement, steel, bricks, sand and crush quantities priced live — add all to cart.</p></a>
+        <a class="card card--hover" href="/ai" data-reveal><div class="ico" data-i="ai"></div><h3>Zarea AI</h3><p>Ask in English or Roman Urdu — "sarya ka rate Lahore" — for prices, comparisons, freight and tracking.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="row between" style="align-items:end;margin-bottom:26px">
+        <div><span class="eyebrow" data-reveal>Open requirements</span><h2 class="h2" style="margin-top:10px" data-reveal>Live RFQs from buyers</h2><p class="lead" data-reveal>Suppliers: bid on real demand. Buyer identities stay private until award.</p></div>
+        <a class="btn btn--orange" href="/suppliers" data-reveal>Start selling →</a>
+      </div>
+      <div class="grid g3" id="open-rfqs"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:720px;margin:0 auto 36px"><span class="eyebrow" data-reveal>How it works</span><h2 class="h2" style="margin-top:10px" data-reveal>Four steps to your first order</h2></div>
+      <div class="steps">
+        <div class="step" data-reveal><h3 class="h4">Register &amp; verify</h3><p class="muted">Create a business profile; KYC with NTN unlocks credit and bidding.</p></div>
+        <div class="step" data-reveal><h3 class="h4">Compare &amp; choose</h3><p class="muted">Live prices, supplier ratings and delivered-cost estimates side by side.</p></div>
+        <div class="step" data-reveal><h3 class="h4">Pay your way</h3><p class="muted">Escrow, advance, cash on delivery or Zarea Credit terms.</p></div>
+        <div class="step" data-reveal><h3 class="h4">Track to site</h3><p class="muted">Vehicle number, status timeline and proof of delivery for every order.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sm">
+    <div class="container">
+      <div class="cta" data-reveal>
+        <div><h2 class="h2">Have a large or recurring requirement?</h2><p style="margin:10px 0 0;opacity:.9">Post an RFQ and let verified suppliers compete for your order.</p></div>
+        <div class="row"><a class="btn btn--light" href="/rfq">Post an RFQ</a><a class="btn" href="/credit">Check credit eligibility</a></div>
+      </div>
+    </div>
+  </section>
+</main>
